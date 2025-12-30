@@ -1,0 +1,21 @@
+[package]
+name = "log_ingestor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Asenkron Runtime (Motor)
+tokio = { version = "1", features = ["full"] }
+
+# Web Framework (HTTP Sunucusu)
+axum = "0.7"
+
+# JSON Serileştirme/Deserileştirme
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Loglama (Opsiyonel ama debug için iyi)
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+chrono = { version = "0.4", features = ["serde"] }
+sqlx = { version = "0.7", features = ["sqlite", "runtime-tokio"] }

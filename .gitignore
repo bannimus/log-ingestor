@@ -1,0 +1,5 @@
+/target
+logs.db
+logs.db-shm
+logs.db-wal
+**/*.rs.bk
